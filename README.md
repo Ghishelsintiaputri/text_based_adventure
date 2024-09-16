@@ -1,58 +1,60 @@
 # Interactive Text Adventure Game
 
-A simple text-based adventure game written in Go where players make choices that lead to different story paths and endings.
+A simple text-based adventure game written in Go where players explore an ancient temple with multiple paths and choices.
 
-## How to Run
+## How to Use
 
-1. **Prerequisites**: Make sure you have Go installed on your system (version 1.16 or higher).
+### Prerequisites
+- Go 1.21 or later installed on your system
 
-2. **Setup**:
+### Installation & Running
+
+1. **Create a new directory for the game:**
    ```bash
-   # Clone or create the project directory
    mkdir text-adventure
    cd text-adventure
-   
-   # Place all the provided files in this directory
    ```
 
-3. **Run the game**:
+2. **Create the game files:**
+   Copy the provided code into three separate files:
+   - `main.go`
+   - `game.go`
+   - `go.mod`
+
+3. **Initialize and run the game:**
    ```bash
-   go run main.go scenes.go
+   go mod tidy
+   go run .
    ```
 
-## How to Play
+### Game Instructions
 
-1. **Starting the Game**:
-   - Run the program and enter your name when prompted
-   - The adventure begins in a mysterious forest
+- **Starting the Game:** The game begins automatically when you run the program
+- **Making Choices:** You'll be presented with numbered options. Type the number of your choice and press Enter
+- **Game Flow:** 
+  - Start at the temple entrance
+  - Choose between different paths (left/right corridors)
+  - Encounter various challenges and puzzles
+  - Multiple endings based on your choices
+  - Collect items that may help you progress
 
-2. **Making Choices**:
-   - Read each scene description carefully
-   - Choose an option by entering the corresponding number (1, 2, 3, etc.)
-   - Press Enter after typing your choice
+### Features
 
-3. **Game Features**:
-   - Multiple story paths and endings
-   - Different locations to explore
-   - Various outcomes based on your choices
-   - Simple text-based interface
+- **Multiple Paths:** Different choices lead to different outcomes
+- **Inventory System:** Collect items that affect gameplay
+- **Combat Scenarios:** Make strategic choices in dangerous situations
+- **Puzzle Solving:** Discover clues and solve mysteries
+- **Replayability:** Try different paths to discover all endings
 
-4. **Game Endings**:
-   - The game ends when you reach a scene with no more choices
-   - Each path leads to a different conclusion
-   - You can replay to explore all possible endings
+### Controls
+- Type numbers (1, 2, 3, etc.) to select options
+- Press Enter to confirm your choice
+- The game provides clear prompts for all interactions
 
-## File Structure
+### Game Structure
+- **Scenes:** Different locations in the temple
+- **Choices:** Multiple options at each scene
+- **Actions:** Some choices trigger special events or item collection
+- **Progression:** Your choices determine which scenes you visit next
 
-- `main.go`: Contains the main game loop and player interaction logic
-- `scenes.go`: Defines all game scenes, choices, and story content
-- `go.mod`: Go module configuration file
-
-## Customization
-
-You can easily modify the game by:
-- Adding new scenes to the `scenes` map in `scenes.go`
-- Creating new choices and connecting them to different scenes
-- Changing existing story text and descriptions
-
-Enjoy your adventure in the mysterious forest!
+Enjoy your adventure through the Forgotten Temple!
